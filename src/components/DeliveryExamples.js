@@ -48,15 +48,17 @@ export default function DeliveryExamples() {
           <div key={store.store} class="store">
             {/* ADD AN IMAGE FOR EACH STORE AND STYLE IT */}
             <h4>{store.store}</h4>
+
             <p class="store-tag">
               ${" "}
               {store.tags.map((tag) => {
                 return <span> - {tag}</span>;
               })}
             </p>
-            <div class="store-tag-border-div">
-              <p class="store-tag-border"></p>
-              <p class="store-tag-border"></p>
+
+            <div class="border-tags">
+              <p class="time-tag">{store.time} Min</p>
+              <p class="price-tag">${store.price}</p>
             </div>
           </div>
         );
