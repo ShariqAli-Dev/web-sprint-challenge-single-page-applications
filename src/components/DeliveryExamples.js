@@ -1,3 +1,6 @@
+import styled from "styled-components";
+import Store from "./Store";
+
 const deliveryStores = [
   {
     img: "https://i0.wp.com/www.eatthis.com/wp-content/uploads/2020/10/mcdonalds-exterior.jpg?resize=640%2C360&ssl=1",
@@ -42,33 +45,63 @@ const deliveryStores = [
     price: 9.99,
   },
 ];
+
+const StyledDelivery = styled.div`
+  width: 90%;
+  margin: auto;
+  height: 50vh;
+
+  h3 {
+    margin: 2%;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .stores {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .store {
+    border: solid 3px red;
+    height: 22vh;
+    width: 27vw;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+
+  .store-image {
+    height: 100px;
+    width: 200px;
+  }
+`;
+
 export default function DeliveryExamples() {
   return (
-    <section class="store-delivery-examples">
+    <StyledDelivery>
       <h3>Food Delivery In New York</h3>
-      {deliveryStores.map((store, index) => {
-        if (index === 2) {
-          return <hr id="store-seperator" />;
-        }
-        return (
-          <div key={store.store} class="store">
-            {/* ADD AN IMAGE FOR EACH STORE AND STYLE IT */}
-            <h4>{store.store}</h4>
 
-            <p class="store-tag">
-              ${" "}
-              {store.tags.map((tag) => {
-                return <span> - {tag}</span>;
-              })}
-            </p>
+      <div class="stores-container">
+        <div class="stores-1 stores">
+          {deliveryStores.map((store, index) => {
+            while (index < 3) {
+              return <Store store={store} />;
+            }
+          })}
+        </div>
 
-            <div class="border-tags">
-              <p class="time-tag">{store.time} Min</p>
-              <p class="price-tag">${store.price}</p>
-            </div>
-          </div>
-        );
-      })}
-    </section>
+        <hr />
+
+        <div class="stores-2 stores">
+          {deliveryStores.map((store, index) => {
+            while (index >= 3) {
+              return <Store store={store} />;
+            }
+          })}
+        </div>
+      </div>
+    </StyledDelivery>
   );
 }

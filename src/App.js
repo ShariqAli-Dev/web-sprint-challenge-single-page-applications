@@ -9,7 +9,6 @@ import OrderCompleted from "./components/OrderCompleted";
 const StyledApp = styled.div`
   height: 100%;
   width: 100%;
-  border: solid 2px black;
 
   h1 {
     font-size: 2rem;
