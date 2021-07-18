@@ -1,3 +1,5 @@
+import Toppings from "./Toppings";
+
 export default function Form() {
   return (
     <div id="form-container">
@@ -38,22 +40,22 @@ export default function Form() {
           <div class="choice-inputs">
             <label>
               Original Red
-              <input type="radio" name="sauce" value="original-red" />
+              <input type="radio" name="sauce" value="original red" />
             </label>
 
             <label>
               Garlic Ranch
-              <input type="radio" name="sauce" value="garlic-ranch" />
+              <input type="radio" name="sauce" value="garlic ranch" />
             </label>
 
             <label>
               BBQ Sauce
-              <input type="radio" name="sauce" value="bbq-sauce" />
+              <input type="radio" name="sauce" value="bbq sauce" />
             </label>
 
             <label>
               Spinach Alfredo
-              <input type="radio" name="sauce" value="spinach-alfredo" />
+              <input type="radio" name="sauce" value="spinach alfredo" />
             </label>
           </div>
         </div>
@@ -66,10 +68,7 @@ export default function Form() {
           </div>
 
           <div class="choice-inputs">
-            <label>
-              Pepperoni
-              <input type="checkbox" name="pepperoni" />
-            </label>
+            <Toppings />
           </div>
         </div>
 
