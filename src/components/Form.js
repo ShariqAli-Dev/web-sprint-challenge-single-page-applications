@@ -9,7 +9,7 @@ export default function Form() {
         <h4>Build Your Own Pizza</h4>
       </section>
 
-      <form action="">
+      <form id="pizza" action="">
         {/* PIZZA SIZE DROPBOX DROPDOWN*/}
         <div class="size">
           <div class="choice-header">
@@ -20,7 +20,7 @@ export default function Form() {
           <div class="choice-inputs">
             <label>
               Size
-              <select name="size">
+              <select id="size-dropdown" name="size">
                 <option value="">Select an option</option>
                 <option value="small">Small</option>
                 <option value="medium">Medium</option>
@@ -72,15 +72,31 @@ export default function Form() {
           </div>
         </div>
 
-        {/* CHOICE OF SUBSTITUE SLIDER BUTTON */}
-        <div class="">
+        {/* SPECIAL INSTRUCTIONS TEXT INPUT */}
+        <div class="special-instructions">
           <div class="choice-header">
-            <h5 class="choice-title"></h5>
-            <p class="choice-requirement"></p>
+            <h5 class="choice-title">Special Instructions</h5>
+            <p class="choice-requirement">Choose up to 1</p>
           </div>
 
           <div class="choice-inputs">
-            <label></label>
+            <label>
+              <input type="text" name="special instructions" placeholder="Anything else you'd like to add" />
+            </label>
+          </div>
+        </div>
+
+        {/* USER'S NAME TEXT INPUT*/}
+        <div class="name">
+          <div class="choice-header">
+            <h5 class="choice-title">Name</h5>
+            <p class="choice-requirement">First and last name</p>
+          </div>
+
+          <div class="choice-inputs">
+            <label>
+              <input type="text" name="name" />
+            </label>
           </div>
         </div>
       </form>

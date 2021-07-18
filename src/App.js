@@ -45,18 +45,18 @@ const App = () => {
           <Link class="react-link" to="/">
             Home
           </Link>
-          <Link class="react-link" to="/shop">
+          <Link class="react-link" id="order-pizza" to="/pizza">
             Shop
           </Link>
         </div>
       </header>
 
       <Switch>
-        <Route path="/shop/order-completed">
+        <Route path="/pizza/order-completed">
           <OrderCompleted />
         </Route>
 
-        <Route path="/shop">
+        <Route path="/pizza">
           <Form />
         </Route>
 

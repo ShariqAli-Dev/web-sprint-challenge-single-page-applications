@@ -45,7 +45,7 @@ export default function Home() {
         <div class="pizza-div-content">
           <h2>Your favorite food, while coding</h2>
           <div id="pizza-button-div">
-            <button onClick={() => history.push("/shop")}>Pizza?</button>
+            <button onClick={() => history.push("/pizza")}>Pizza?</button>
           </div>
         </div>
       </section>
