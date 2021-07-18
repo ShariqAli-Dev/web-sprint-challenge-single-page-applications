@@ -1,9 +1,13 @@
 import React from "react";
 import { Link, Route, Switch } from "react-router-dom";
+import styled from "styled-components";
 // import Axios from "axios";
 
 import Form from "./components/Form";
 import Home from "./components/Home";
+
+const StyledApp = styled.div`\
+`;
 
 const App = () => {
   // Axios.get("https://reqres.in/api/orders")
