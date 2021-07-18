@@ -6,7 +6,11 @@ import styled from "styled-components";
 import Form from "./components/Form";
 import Home from "./components/Home";
 
-const StyledApp = styled.div`\
+const StyledApp = styled.div`
+  height: 100%;
+  width: 100%;
+  border: solid 2px black;
+  margin: auto;
 `;
 
 const App = () => {
@@ -17,7 +21,7 @@ const App = () => {
   //   });
 
   return (
-    <div class="container">
+    <StyledApp>
       <header class="store-header">
         <h1>LAMBDA EATS</h1>
         <div class="nav-links">
@@ -35,7 +39,7 @@ const App = () => {
           <Home />
         </Route>
       </Switch>
-    </div>
+    </StyledApp>
   );
 };
 export default App;
