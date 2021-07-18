@@ -17,7 +17,7 @@ const StyledApp = styled.div`
   .store-header {
     display: flex;
     justify-content: space-between;
-    padding: 2% 5%;
+    padding: 1% 5%;
     align-items: center;
   }
 

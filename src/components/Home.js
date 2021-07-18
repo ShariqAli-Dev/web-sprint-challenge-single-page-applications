@@ -24,7 +24,7 @@ const StyledHome = styled.div`
     background-size: cover;
     background-position: center;
     margin: auto;
-    height: 300px;
+    height: 30vh;
   }
 
   .pizza-div-content {
