@@ -111,6 +111,7 @@ const App = () => {
       .post("https://reqres.in/api/orders", newOrder)
       .then((res) => {
         setOrders(orders.concat(res.data));
+        console.log(res.data);
       })
       .catch((err) => {
         debugger;

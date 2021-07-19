@@ -76,7 +76,7 @@ export default function DeliveryExamples() {
         <div className="stores-1 stores">
           {deliveryStores.map((store, index) => {
             while (index < 3) {
-              return <Store store={store} />;
+              return <Store key={index} store={store} />;
             }
           })}
         </div>
@@ -84,7 +84,7 @@ export default function DeliveryExamples() {
         <div className="stores-2 stores">
           {deliveryStores.map((store, index) => {
             while (index >= 3) {
-              return <Store store={store} />;
+              return <Store key={index} store={store} />;
             }
           })}
         </div>

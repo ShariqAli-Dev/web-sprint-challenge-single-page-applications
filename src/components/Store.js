@@ -47,14 +47,14 @@ const StyledStore = styled.div`
 
 export default function Store({ store }) {
   return (
-    <StyledStore key={store.store}>
+    <StyledStore>
       <div className="tags">
         <img src={store.img} alt="storeImage" className="image" />
         <h4 className="name">{store.store}</h4>
 
         <p className="type">
-          {store.tags.map((tag) => {
-            return <span> - {tag}</span>;
+          {store.tags.map((tag, index) => {
+            return <span key={index}> - {tag}</span>;
           })}
         </p>
 

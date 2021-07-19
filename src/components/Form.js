@@ -91,7 +91,7 @@ export default function Form({ values, change, submit, disabled, errors }) {
 
           <div className="choice-inputs">
             <label>
-              <select id="size-dropdown" name="size">
+              <select onChange={onChange} id="size-dropdown" name="size">
                 <option value="">Select an option</option>
                 <option value="small">Small</option>
                 <option value="medium">Medium</option>
@@ -117,7 +117,7 @@ export default function Form({ values, change, submit, disabled, errors }) {
         <div className="toppings">
           <div className="choice-header">
             <h5 className="choice-title">Add Toppings</h5>
-            <p className="choice-requirement">Choose up to 10</p>
+            <p className="choice-requirement">Choose up to 6</p>
           </div>
 
           <div className="choice-inputs">
@@ -158,6 +158,20 @@ export default function Form({ values, change, submit, disabled, errors }) {
           </button>
         </div>
       </form>
+
+      <div className="errors">
+        <div>{errors.special}</div>
+        <div>{errors.name}</div>
+        <div>{errors.size}</div>
+        <div>{errors.sauce}</div>
+        <div>{errors.pepperoni}</div>
+        <div>{errors.sausage}</div>
+        <div>{errors.canadian}</div>
+        <div>{errors.green}</div>
+        <div>{errors.pineapple}</div>
+        <div>{errors.extra}</div>
+        <div>{errors.special}</div>
+      </div>
     </StyledForm>
   );
 }
