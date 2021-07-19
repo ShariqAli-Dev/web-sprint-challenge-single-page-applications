@@ -10,7 +10,7 @@ const StyledSauces = styled.div`
   }
 `;
 
-export default function Sauces() {
+export default function Sauces({ onChange }) {
   const sauces = ["Original", "Garlic Ranch", "BBQ Sauce", "Spinach Alfredo"];
 
   return (
@@ -19,7 +19,7 @@ export default function Sauces() {
         return (
           <label key={sauce.toLowerCase()}>
             {sauce}
-            <input type="radio" name="sauce" value={sauce.toLowerCase()} />
+            <input type="radio" name="sauce" value={sauce.toLowerCase()} onChange={onChange} />
           </label>
         );
       })}

@@ -64,15 +64,24 @@ const StyledForm = styled.div`
 // values={formValues} change={inputChange} submit={formSubmit} disabled={disabled} erros={formErrors}
 
 export default function Form({ values, change, submit, disabled, errors }) {
+  const onSubmit = (evt) => {
+    evt.preventDefault();
+    submit();
+  };
+  const onChange = (evt) => {
+    const { name, value, type, checked } = evt.target;
+    const valueToUse = type === "checkbox" ? checked : value;
+    change(name, valueToUse);
+  };
+
   return (
     <StyledForm id="form-container">
       <section className="form-header">
         <h3 id="form-title">Build Your Own Pizza</h3>
         <img src="https://www.agrodolce.it/app/uploads/2016/02/pizza-napoletana-980x400.jpg" alt="pizzaImage" />
-        {/* <h4>Build Your Own Pizza</h4> */}
       </section>
 
-      <form id="pizza-form">
+      <form onSubmit={onSubmit} id="pizza-form">
         {/* PIZZA SIZE DROPBOX DROPDOWN*/}
         <div className="size">
           <div className="choice-header">
@@ -100,7 +109,7 @@ export default function Form({ values, change, submit, disabled, errors }) {
           </div>
 
           <div className="choice-inputs">
-            <Sauces />
+            <Sauces onChange={onChange} />
           </div>
         </div>
 
@@ -112,7 +121,7 @@ export default function Form({ values, change, submit, disabled, errors }) {
           </div>
 
           <div className="choice-inputs">
-            <Toppings />
+            <Toppings values={values} onChange={onChange} />
           </div>
         </div>
 
@@ -124,7 +133,7 @@ export default function Form({ values, change, submit, disabled, errors }) {
 
           <div className="choice-inputs">
             <label>
-              <input id="special-text" type="text" name="special" placeholder="Anything else you'd like to add" />
+              <input id="special-text" type="text" name="special" placeholder="Anything else you'd like to add" value={values.special} onChange={onChange} />
             </label>
           </div>
         </div>
@@ -138,13 +147,15 @@ export default function Form({ values, change, submit, disabled, errors }) {
 
           <div className="choice-inputs">
             <label>
-              <input id="name-input" type="text" name="name" />
+              <input id="name-input" type="text" name="name" value={values.name} onChange={onChange} />
             </label>
           </div>
         </div>
 
         <div className="choice-inputs">
-          <button id="order-button">Add To Order</button>
+          <button disabled={disabled} id="order-button">
+            Add To Order
+          </button>
         </div>
       </form>
     </StyledForm>

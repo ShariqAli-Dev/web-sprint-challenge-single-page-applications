@@ -10,7 +10,7 @@ const StyledToppings = styled.div`
   }
 `;
 
-export default function Toppings() {
+export default function Toppings({ values, onChange }) {
   const toppings = ["Pepperoni", "Sausage", "Canadian Bacon", "Green Pepper", "Pineapple", "Extra Cheese"];
 
   return (
@@ -19,14 +19,10 @@ export default function Toppings() {
         return (
           <label key={topping.split(" ")[0].toLocaleLowerCase()}>
             {topping}
-            <input type="checkbox" name={topping.split(" ")[0].toLocaleLowerCase()} />
+            <input type="checkbox" name={topping.split(" ")[0].toLocaleLowerCase()} value={values[topping.split(" ")[0].toLocaleLowerCase()]} onChange={onChange} />
           </label>
         );
       })}
-      <label>
-        Pepperoni
-        <input type="checkbox" name="pepperoni" />
-      </label>
     </StyledToppings>
   );
 }
