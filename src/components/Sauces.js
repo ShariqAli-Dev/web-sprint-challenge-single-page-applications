@@ -17,7 +17,7 @@ export default function Sauces() {
     <StyledSauces>
       {sauces.map((sauce) => {
         return (
-          <label>
+          <label key={sauce.toLowerCase()}>
             {sauce}
             <input type="radio" name="sauce" value={sauce.toLowerCase()} />
           </label>

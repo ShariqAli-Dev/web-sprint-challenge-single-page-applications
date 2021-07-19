@@ -17,7 +17,7 @@ export default function Toppings() {
     <StyledToppings>
       {toppings.map((topping) => {
         return (
-          <label>
+          <label key={topping.split(" ")[0].toLocaleLowerCase()}>
             {topping}
             <input type="checkbox" name={topping.split(" ")[0].toLocaleLowerCase()} />
           </label>
