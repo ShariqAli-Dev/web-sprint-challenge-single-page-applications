@@ -52,8 +52,8 @@ const StyledForm = styled.div`
     margin: 1%;
   }
 
-  #instructions,
-  #customer {
+  #special-text,
+  #name-input {
     width: 90%;
     margin: auto;
     padding: 2%;
@@ -70,7 +70,7 @@ export default function Form() {
         {/* <h4>Build Your Own Pizza</h4> */}
       </section>
 
-      <form id="pizza">
+      <form id="pizza-form">
         {/* PIZZA SIZE DROPBOX DROPDOWN*/}
         <div class="size">
           <div class="choice-header">
@@ -122,7 +122,7 @@ export default function Form() {
 
           <div class="choice-inputs">
             <label>
-              <input id="instructions" type="text" name="special instructions" placeholder="Anything else you'd like to add" />
+              <input id="special-text" type="text" name="special" placeholder="Anything else you'd like to add" />
             </label>
           </div>
         </div>
@@ -136,13 +136,13 @@ export default function Form() {
 
           <div class="choice-inputs">
             <label>
-              <input id="customer" type="text" name="name" />
+              <input id="name-input" type="text" name="name" />
             </label>
           </div>
         </div>
 
         <div class="choice-inputs">
-          <button>Add To Order</button>
+          <button id="order-button">Add To Order</button>
         </div>
       </form>
     </StyledForm>

@@ -11,7 +11,7 @@ const StyledToppings = styled.div`
 `;
 
 export default function Toppings() {
-  const toppings = ["Pepperoni", "Sausage", "Canadian Bacon", "Spicy Italian Sausage", "Grilled Chicken", "Onions", "Green Pepper", "Diced Tomatoes", "Black Olives", "Roasted Garlic", "Artichoke Hears", "Three Cheese", "Pineapple", "Extra Cheese"];
+  const toppings = ["Pepperoni", "Sausage", "Canadian Bacon", "Green Pepper", "Pineapple", "Extra Cheese"];
 
   return (
     <StyledToppings>
@@ -19,7 +19,7 @@ export default function Toppings() {
         return (
           <label>
             {topping}
-            <input type="checkbox" name={topping.toLocaleLowerCase()} />
+            <input type="checkbox" name={topping.split(" ")[0].toLocaleLowerCase()} />
           </label>
         );
       })}

@@ -36,6 +36,33 @@ const StyledApp = styled.div`
   }
 `;
 
+const initialFormValues = {
+  // text inputs
+  special: "",
+  name: "",
+
+  // dropdown
+  size: "",
+
+  // radio buttons
+  sauce: "",
+
+  // checkboxes
+  pepperoni: false,
+  sausage: false,
+  canadian: false,
+  green: false,
+  pineapple: false,
+  extra: false,
+};
+
+const initialFormErrors = {
+  special: "",
+  name: "",
+  size: "",
+  sauce: "",
+};
+
 const App = () => {
   return (
     <StyledApp>
