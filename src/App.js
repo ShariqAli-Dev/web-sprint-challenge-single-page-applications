@@ -7,7 +7,7 @@ import Home from "./components/Home";
 import OrderCompleted from "./components/OrderCompleted";
 
 const StyledApp = styled.div`
-  height: 100%;
+  height: 100vh;
   width: 100%;
 
   h1 {
@@ -52,7 +52,7 @@ const App = () => {
       </header>
 
       <Switch>
-        <Route path="/pizza/order-completed">
+        <Route path="/pizza/completed">
           <OrderCompleted />
         </Route>
 

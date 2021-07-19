@@ -1,15 +1,60 @@
 import Toppings from "./Toppings";
+import Sauces from "./Sauces";
+import styled from "styled-components";
+
+const StyledForm = styled.div`
+  height: 100%;
+  width: 60%;
+  margin: auto;
+  .choice-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .choice-requirement {
+    font-size: 1.15rem;
+  }
+
+  .form-header img {
+    width: 100%;
+    display: block;
+    height: auto;
+    margin: auto;
+  }
+
+  .choice-header {
+    background-color: #d6d6d6;
+    padding: 2%;
+  }
+
+  .choice-inputs {
+    padding: 4%;
+  }
+
+  #size-dropdown {
+    padding: 1%;
+    font-size: 1.05rem;
+    width: 40%;
+  }
+
+  #form-title {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1%;
+    margin: 1%;
+  }
+`;
 
 export default function Form() {
   return (
-    <div id="form-container">
-      <section ckass="form-header">
-        <h3>Build Your Own Pizza</h3>
+    <StyledForm id="form-container">
+      <section class="form-header">
+        <h3 id="form-title">Build Your Own Pizza</h3>
         <img src="https://www.agrodolce.it/app/uploads/2016/02/pizza-napoletana-980x400.jpg" alt="pizzaImage" />
-        <h4>Build Your Own Pizza</h4>
+        {/* <h4>Build Your Own Pizza</h4> */}
       </section>
 
-      <form id="pizza" action="">
+      <form id="pizza">
         {/* PIZZA SIZE DROPBOX DROPDOWN*/}
         <div class="size">
           <div class="choice-header">
@@ -19,7 +64,6 @@ export default function Form() {
 
           <div class="choice-inputs">
             <label>
-              Size
               <select id="size-dropdown" name="size">
                 <option value="">Select an option</option>
                 <option value="small">Small</option>
@@ -38,25 +82,7 @@ export default function Form() {
           </div>
 
           <div class="choice-inputs">
-            <label>
-              Original Red
-              <input type="radio" name="sauce" value="original red" />
-            </label>
-
-            <label>
-              Garlic Ranch
-              <input type="radio" name="sauce" value="garlic ranch" />
-            </label>
-
-            <label>
-              BBQ Sauce
-              <input type="radio" name="sauce" value="bbq sauce" />
-            </label>
-
-            <label>
-              Spinach Alfredo
-              <input type="radio" name="sauce" value="spinach alfredo" />
-            </label>
+            <Sauces />
           </div>
         </div>
 
@@ -76,7 +102,6 @@ export default function Form() {
         <div class="special-instructions">
           <div class="choice-header">
             <h5 class="choice-title">Special Instructions</h5>
-            <p class="choice-requirement">Choose up to 1</p>
           </div>
 
           <div class="choice-inputs">
@@ -100,6 +125,6 @@ export default function Form() {
           </div>
         </div>
       </form>
-    </div>
+    </StyledForm>
   );
 }
