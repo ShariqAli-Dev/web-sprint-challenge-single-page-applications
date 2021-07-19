@@ -6,6 +6,14 @@ const StyledForm = styled.div`
   height: 100%;
   width: 60%;
   margin: auto;
+
+  button {
+    width: 50%;
+    margin: auto 25%;
+    padding: 3%;
+    border-radius: 25px;
+  }
+
   .choice-title {
     font-size: 1.5rem;
     font-weight: bold;
@@ -42,6 +50,14 @@ const StyledForm = styled.div`
     text-align: center;
     padding: 1%;
     margin: 1%;
+  }
+
+  #instructions,
+  #customer {
+    width: 90%;
+    margin: auto;
+    padding: 2%;
+    font-size: 1.2rem;
   }
 `;
 
@@ -106,7 +122,7 @@ export default function Form() {
 
           <div class="choice-inputs">
             <label>
-              <input type="text" name="special instructions" placeholder="Anything else you'd like to add" />
+              <input id="instructions" type="text" name="special instructions" placeholder="Anything else you'd like to add" />
             </label>
           </div>
         </div>
@@ -120,9 +136,13 @@ export default function Form() {
 
           <div class="choice-inputs">
             <label>
-              <input type="text" name="name" />
+              <input id="customer" type="text" name="name" />
             </label>
           </div>
+        </div>
+
+        <div class="choice-inputs">
+          <button>Add To Order</button>
         </div>
       </form>
     </StyledForm>
