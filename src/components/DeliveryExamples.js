@@ -72,8 +72,8 @@ export default function DeliveryExamples() {
     <StyledDelivery>
       <h3>Food Delivery In New York</h3>
 
-      <div class="stores-container">
-        <div class="stores-1 stores">
+      <div className="stores-container">
+        <div className="stores-1 stores">
           {deliveryStores.map((store, index) => {
             while (index < 3) {
               return <Store store={store} />;
@@ -81,7 +81,7 @@ export default function DeliveryExamples() {
           })}
         </div>
 
-        <div class="stores-2 stores">
+        <div className="stores-2 stores">
           {deliveryStores.map((store, index) => {
             while (index >= 3) {
               return <Store store={store} />;

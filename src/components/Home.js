@@ -41,8 +41,8 @@ export default function Home() {
 
   return (
     <StyledHome>
-      <section class="main-pizza-div">
-        <div class="pizza-div-content">
+      <section className="main-pizza-div">
+        <div className="pizza-div-content">
           <h2>Your favorite food, while coding</h2>
           <div id="pizza-button-div">
             <button onClick={() => history.push("/pizza")}>Pizza?</button>

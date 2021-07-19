@@ -61,10 +61,12 @@ const StyledForm = styled.div`
   }
 `;
 
-export default function Form() {
+// values={formValues} change={inputChange} submit={formSubmit} disabled={disabled} erros={formErrors}
+
+export default function Form({ values, change, submit, disabled, errors }) {
   return (
     <StyledForm id="form-container">
-      <section class="form-header">
+      <section className="form-header">
         <h3 id="form-title">Build Your Own Pizza</h3>
         <img src="https://www.agrodolce.it/app/uploads/2016/02/pizza-napoletana-980x400.jpg" alt="pizzaImage" />
         {/* <h4>Build Your Own Pizza</h4> */}
@@ -72,13 +74,13 @@ export default function Form() {
 
       <form id="pizza-form">
         {/* PIZZA SIZE DROPBOX DROPDOWN*/}
-        <div class="size">
-          <div class="choice-header">
-            <h5 class="choice-title">Choice of Size</h5>
-            <p class="choice-requirement">Required</p>
+        <div className="size">
+          <div className="choice-header">
+            <h5 className="choice-title">Choice of Size</h5>
+            <p className="choice-requirement">Required</p>
           </div>
 
-          <div class="choice-inputs">
+          <div className="choice-inputs">
             <label>
               <select id="size-dropdown" name="size">
                 <option value="">Select an option</option>
@@ -91,36 +93,36 @@ export default function Form() {
         </div>
 
         {/* CHOICE OF SAUCE RADIO BUTTON*/}
-        <div class="sauce">
-          <div class="choice-header">
-            <h5 class="choice-title">Choice of Sauce</h5>
-            <p class="choice-requirement">Required</p>
+        <div className="sauce">
+          <div className="choice-header">
+            <h5 className="choice-title">Choice of Sauce</h5>
+            <p className="choice-requirement">Required</p>
           </div>
 
-          <div class="choice-inputs">
+          <div className="choice-inputs">
             <Sauces />
           </div>
         </div>
 
         {/* CHOICE OF TOPPINGS CHECKBOX*/}
-        <div class="toppings">
-          <div class="choice-header">
-            <h5 class="choice-title">Add Toppings</h5>
-            <p class="choice-requirement">Choose up to 10</p>
+        <div className="toppings">
+          <div className="choice-header">
+            <h5 className="choice-title">Add Toppings</h5>
+            <p className="choice-requirement">Choose up to 10</p>
           </div>
 
-          <div class="choice-inputs">
+          <div className="choice-inputs">
             <Toppings />
           </div>
         </div>
 
         {/* SPECIAL INSTRUCTIONS TEXT INPUT */}
-        <div class="special-instructions">
-          <div class="choice-header">
-            <h5 class="choice-title">Special Instructions</h5>
+        <div className="special-instructions">
+          <div className="choice-header">
+            <h5 className="choice-title">Special Instructions</h5>
           </div>
 
-          <div class="choice-inputs">
+          <div className="choice-inputs">
             <label>
               <input id="special-text" type="text" name="special" placeholder="Anything else you'd like to add" />
             </label>
@@ -128,20 +130,20 @@ export default function Form() {
         </div>
 
         {/* USER'S NAME TEXT INPUT*/}
-        <div class="name">
-          <div class="choice-header">
-            <h5 class="choice-title">Name</h5>
-            <p class="choice-requirement">First and last name</p>
+        <div className="name">
+          <div className="choice-header">
+            <h5 className="choice-title">Name</h5>
+            <p className="choice-requirement">First and last name</p>
           </div>
 
-          <div class="choice-inputs">
+          <div className="choice-inputs">
             <label>
               <input id="name-input" type="text" name="name" />
             </label>
           </div>
         </div>
 
-        <div class="choice-inputs">
+        <div className="choice-inputs">
           <button id="order-button">Add To Order</button>
         </div>
       </form>

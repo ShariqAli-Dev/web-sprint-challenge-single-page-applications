@@ -136,13 +136,13 @@ const App = () => {
 
   return (
     <StyledApp>
-      <header class="store-header">
+      <header className="store-header">
         <h1>LAMBDA EATS</h1>
-        <div class="nav-links">
-          <Link class="react-link" to="/">
+        <div className="nav-links">
+          <Link className="react-link" to="/">
             Home
           </Link>
-          <Link class="react-link" id="order-pizza" to="/pizza">
+          <Link className="react-link" id="order-pizza" to="/pizza">
             Shop
           </Link>
         </div>
@@ -154,7 +154,7 @@ const App = () => {
         </Route>
 
         <Route path="/pizza">
-          <Form values={formValues} change={inputChange} submit={formSubmit} disabled={disabled} erros={formErrors} />
+          <Form values={formValues} change={inputChange} submit={formSubmit} disabled={disabled} errors={formErrors} />
         </Route>
 
         <Route path="/">

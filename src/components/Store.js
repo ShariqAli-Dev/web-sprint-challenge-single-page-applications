@@ -48,19 +48,19 @@ const StyledStore = styled.div`
 export default function Store({ store }) {
   return (
     <StyledStore key={store.store}>
-      <div class="tags">
-        <img src={store.img} alt="storeImage" class="image" />
-        <h4 class="name">{store.store}</h4>
+      <div className="tags">
+        <img src={store.img} alt="storeImage" className="image" />
+        <h4 className="name">{store.store}</h4>
 
-        <p class="type">
+        <p className="type">
           {store.tags.map((tag) => {
             return <span> - {tag}</span>;
           })}
         </p>
 
-        <div class="bordered">
-          <p class="time">{store.time} Min</p>
-          <p class="price">${store.price}</p>
+        <div className="bordered">
+          <p className="time">{store.time} Min</p>
+          <p className="price">${store.price}</p>
         </div>
       </div>
     </StyledStore>
