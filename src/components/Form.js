@@ -1,3 +1,5 @@
+import { useHistory } from "react-router-dom";
+
 import Toppings from "./Toppings";
 import Sauces from "./Sauces";
 import styled from "styled-components";
@@ -64,9 +66,12 @@ const StyledForm = styled.div`
 // values={formValues} change={inputChange} submit={formSubmit} disabled={disabled} erros={formErrors}
 
 export default function Form({ values, change, submit, disabled, errors }) {
+  const history = useHistory();
+
   const onSubmit = (evt) => {
     evt.preventDefault();
     submit();
+    history.push("/pizza/orders");
   };
   const onChange = (evt) => {
     const { name, value, type, checked } = evt.target;

@@ -111,7 +111,7 @@ const App = () => {
       .post("https://reqres.in/api/orders", newOrder)
       .then((res) => {
         setOrders(orders.concat(res.data));
-        console.log(res.data);
+        console.log(orders);
       })
       .catch((err) => {
         debugger;
@@ -146,12 +146,15 @@ const App = () => {
           <Link className="react-link" id="order-pizza" to="/pizza">
             Shop
           </Link>
+          <Link className="react-link" id="order-history" to="/pizza/orders">
+            Orders
+          </Link>
         </div>
       </header>
 
       <Switch>
-        <Route path="/pizza/completed">
-          <OrderCompleted />
+        <Route path="/pizza/orders">
+          <OrderCompleted orders={orders} />
         </Route>
 
         <Route path="/pizza">
